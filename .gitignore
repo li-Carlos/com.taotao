@@ -1,1 +1,10 @@
 .idea
+taotao-manager-dao/target/
+taotao-manager-dao/taotao-manager-dao.iml
+taotao-manager-interface/target/
+taotao-manager-interface/taotao-manager-interface.iml
+taotao-manager-pojo/target/
+taotao-manager-pojo/taotao-manager-pojo.iml
+taotao-manager-service/target/
+taotao-manager-service/taotao-manager-service.iml
+taotao-manager.iml

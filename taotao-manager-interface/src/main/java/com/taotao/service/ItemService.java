@@ -1,7 +1,7 @@
 package com.taotao.service;
 
-import com.taotao.pojo.EasyUIDataGridResult;
-import com.taotao.pojo.TaotaoResult;
+import com.taotao.common.pojo.EasyUIDataGridResult;
+import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.pojo.TbItem;
 
 public interface ItemService {

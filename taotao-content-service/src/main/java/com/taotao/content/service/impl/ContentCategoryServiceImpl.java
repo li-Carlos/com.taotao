@@ -167,6 +167,4 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
         result.setRows(list);
         return result;
     }
-
-
 }

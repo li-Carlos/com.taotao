@@ -2,7 +2,6 @@ package com.taotao.content.service;
 
 import java.util.List;
 
-import com.taotao.common.pojo.EasyUIDataGridResult;
 import com.taotao.common.pojo.EasyUITreeNode;
 import com.taotao.common.pojo.TaotaoResult;
 
@@ -12,5 +11,5 @@ public interface ContentCategoryService {
 	TaotaoResult addContentCategory(Long parentId, String name);
 	TaotaoResult deleteContentCategory(Long id);
 	TaotaoResult updateContentCategory(Long id,String name);
-	EasyUIDataGridResult getContentList(long categoryId, Integer page, Integer rows);
+
 }

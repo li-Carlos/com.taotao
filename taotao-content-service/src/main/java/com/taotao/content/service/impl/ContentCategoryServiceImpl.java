@@ -32,7 +32,7 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
     @Autowired
     private TbContentCategoryMapper contentCategoryMapper;
     @Autowired
-    private TbContentMapper ContentMapper;
+    private TbContentMapper contentMapper;
 
     @Override
     public List<EasyUITreeNode> getContentCategoryList(long parentId) {
@@ -149,22 +149,5 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
         return TaotaoResult.ok(contentCategory);
     }
 
-    @Override
-    public EasyUIDataGridResult getContentList(long categoryId, Integer page, Integer rows) {
-        //设置分页信息
-        PageHelper.startPage(page,rows);
-        //执行查询
-        TbContentExample contentExample = new TbContentExample();
-        TbContentExample.Criteria criteria = contentExample.createCriteria();
-        if(categoryId!=0){
-            criteria.andCategoryIdEqualTo(categoryId);
-        }
-        List<TbContent> list =ContentMapper.selectByExample(contentExample);
-        //取查询结果
-        PageInfo<TbContent> pageInfo = new PageInfo<>(list);
-        EasyUIDataGridResult result = new EasyUIDataGridResult();
-        result.setTotal(pageInfo.getTotal());
-        result.setRows(list);
-        return result;
-    }
+
 }

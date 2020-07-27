@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.taotao.jedis.TestJedis
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 2.315 s <<< FAILURE! - in com.taotao.jedis.TestJedis
+testJedis(com.taotao.jedis.TestJedis)  Time elapsed: 0.005 s  <<< ERROR!
+redis.clients.jedis.exceptions.JedisMovedDataException: MOVED 15098 192.168.8.106:6381
+	at com.taotao.jedis.TestJedis.testJedis(TestJedis.java:20)
+
+testJedisGet(com.taotao.jedis.TestJedis)  Time elapsed: 0.001 s  <<< ERROR!
+redis.clients.jedis.exceptions.JedisMovedDataException: MOVED 6918 192.168.8.106:6380
+	at com.taotao.jedis.TestJedis.testJedisGet(TestJedis.java:49)
+
+testJedisPool(com.taotao.jedis.TestJedis)  Time elapsed: 2.004 s  <<< ERROR!
+redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at com.taotao.jedis.TestJedis.testJedisPool(TestJedis.java:32)
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: Failed connecting to host 192.168.25.153:6379
+	at com.taotao.jedis.TestJedis.testJedisPool(TestJedis.java:32)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at com.taotao.jedis.TestJedis.testJedisPool(TestJedis.java:32)
+
